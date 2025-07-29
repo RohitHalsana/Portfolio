@@ -425,6 +425,11 @@ footer .copyright {
   margin-top: 40px;
   font-size: 16px;
 }
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
 @media(max-width: 1285px) {
   #menu-icon{
     display: block;
