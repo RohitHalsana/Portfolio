@@ -205,37 +205,67 @@ section {
     color: black; /* Assuming the square character was meant to be 'black' */
 }
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10rem;
-    background: var(--second-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--second-bg-color);
 }
 
 .about-img img {
-    width: 32vw;
-    border-radius: 50%; /* Changed from 50% to 50% to ensure valid CSS */
-    box-shadow: 0 0 25px var(--main-color);
-    transition: 0.4s ease-in-out;
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
 }
+
 .about-img img:hover {
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color),
-                0 0 100px var(--main-color);
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color),
+              0 0 100px var(--main-color);
 }
 
 .about-content h2 {
-    font-size: 7rem;
-    text-align: left;
+  font-size: 7rem;
+  text-align: left;
 }
 
 .about-content p {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
+/* ✅ Fixed selector: use .about-content instead of .about-section */
 .about-content .btn {
-    margin: 3rem 0;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  background: linear-gradient(270deg, #df8908 10%, #ff1d15 100%);
+  color: #fff;
+  border: none;
+  transition: 0.3s ease-in-out;
 }
+
+.about-content .btn:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Hidden/Show toggle for extra text */
+.hidden-text {
+  display: none;
+}
+
+.hidden-text.show {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 ::-webkit-scrollbar {
     width: 20px;
 }
@@ -430,6 +460,91 @@ footer .copyright {
     color: inherit;
     display: block;
 }
+/* ================= Hire Me Section ================= */
+.hire-section {
+  background: var(--second-bg-color);
+  padding: 8rem 15%;
+  border-radius: 2rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  margin: 5rem auto;
+}
+
+.hire-section h2 {
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  color: var(--main-color);
+}
+
+.hire-section p {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+  color: var(--text-color);
+}
+
+.hire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hire-form .form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.hire-form label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--main-color);
+}
+
+.hire-form input,
+.hire-form textarea {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: 2px solid var(--main-color);
+  border-radius: 1rem;
+  background: white;
+  color: var(--text-color);
+  transition: 0.3s ease-in-out;
+}
+
+.hire-form input:focus,
+.hire-form textarea:focus {
+  outline: none;
+  border-color: #ff1d15;
+  box-shadow: 0 0 15px var(--main-color);
+}
+
+.hire-form button {
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 3rem;
+  background: linear-gradient(270deg, #df8908 10%, #ff1d15 100%);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.hire-form button:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 0 20px var(--main-color);
+}
+.about-section {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+
+
+
 @media(max-width: 1285px) {
   #menu-icon{
     display: block;
@@ -589,4 +704,111 @@ footer .copyright {
   font-size: 1.2rem;
 }
 
+}
+/* ================= Responsive: Hire Me Section ================= */
+
+/* Large laptops/desktops */
+@media (max-width: 1280px) {
+  .hire-section {
+    padding: 6rem 10%;
+  }
+
+  .hire-section h2 {
+    font-size: 4.5rem;
+  }
+
+  .hire-section p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablets (landscape) */
+@media (max-width: 1024px) {
+  .hire-section {
+    padding: 5rem 8%;
+  }
+
+  .hire-section h2 {
+    font-size: 4rem;
+  }
+
+  .hire-section p {
+    font-size: 1.5rem;
+  }
+
+  .hire-form input,
+  .hire-form textarea {
+    font-size: 1.5rem;
+    padding: 1.3rem;
+  }
+
+  .hire-form button {
+    font-size: 1.6rem;
+    padding: 1.3rem 3rem;
+  }
+}
+
+/* Tablets (portrait) / Small laptops */
+@media (max-width: 720px) {
+  .hire-section {
+    padding: 4rem 6%;
+  }
+
+  .hire-section h2 {
+    font-size: 3.5rem;
+  }
+
+  .hire-section p {
+    font-size: 1.4rem;
+  }
+
+  .hire-form {
+    gap: 1.5rem;
+  }
+
+  .hire-form input,
+  .hire-form textarea {
+    font-size: 1.4rem;
+    padding: 1.2rem;
+  }
+
+  .hire-form button {
+    font-size: 1.5rem;
+    padding: 1.2rem 2.5rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 580px) {
+  .hire-section {
+    padding: 3.5rem 5%;
+    border-radius: 1rem;
+  }
+
+  .hire-section h2 {
+    font-size: 2.8rem;
+  }
+
+  .hire-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hire-form .form-group {
+    flex-direction: column; /* stack inputs */
+    width: 100%;
+  }
+
+  .hire-form input,
+  .hire-form textarea {
+    width: 100%;   /* full width */
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .hire-form button {
+    width: 100%;   /* full width button */
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
 }

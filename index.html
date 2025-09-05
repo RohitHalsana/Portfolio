@@ -32,6 +32,7 @@
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
+            <a href="#hire">Hire</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -55,7 +56,7 @@
                 </div>
             
                 <div class="btn-group">
-                    <a href="#" class="btn">Hire</a>
+                    <a href="#hire" class="btn">Hire</a>
                     <a href="#contact" class="btn">Contact</a>
                 </div>
             </div>       
@@ -68,21 +69,33 @@
     <!--* About --> 
     <section class="about" id="about">
         <div class="about-img">
-            <img src="Rohit Halsana.jpeg" alt="Your Profile Picture"> </div>
+            <img src="Rohit Halsana.jpeg" alt="Your Profile Picture">
+        </div>
 
         <div class="about-content">
-            <h2>About <span>Me</h2>
+            <h2>About <span>Me</span></h2>
             <p>
-                Hello! I'm a passionate <span>Full Stack Web Developer</span> with a keen eye for creating robust and user-friendly web applications.
-                My expertise spans across both <br><br> <span>Front-end technologiess</span> like HTML, CSS, and JavaScript (with frameworks like React, NextJs) &
-                <br><br>
-                <span>Back-end development</span> using technologies such as Node.js, Python (Django/Flask), along with database management.
-                <br><br> I thrive on building complete solutions, from designing intuitive user interfaces to developing powerful server-side logic and managing databases.
-                My goal is to deliver efficient, scalable, and visually appealing digital experiences that solve real-world problems. I am always eager to learn new technologies and embrace challenges.
+            Hello! I'm a passionate <span>Full Stack Web Developer</span> with a keen eye for creating robust and user-friendly web applications.
+            My expertise spans across both <br>
+            <span>Front-end technologies</span> like HTML, CSS, and JavaScript (with frameworks like React, NextJs) & <br>
+            <span>Back-end development</span> using technologies such as Node.js, Python (Django/Flask), along with database management.  <br>
+            Beyond web development, I have explored,<br>
+            <span>Cloud platforms</span> such as AWS, Microsoft Azure, and Oracle Cloud (OCI), deploying applications using EC2, S3, VMs, RDS, and Object Storage. I am comfortable configuring secure cloud environments, managing databases, and monitoring resources efficiently.>
             </p>
-            <a href="#contact" class="btn">Read More</a>
+
+            <!-- Hidden extra text -->
+            <p id="moreText" class="hidden-text" data-fulltext="
+            I thrive on building complete solutions, from designing intuitive user interfaces to developing powerful server-side logic and managing databases. Along with this, I have a strong foundation in Data Structures & Algorithms, DBMS, Computer Networks, and OOPs, which helps me write clean and optimized code.
+
+            My goal is to deliver efficient, scalable, and visually appealing digital experiences that solve real-world problems. Over time, I have gained hands-on experience with front-end frameworks like React.js and Next.js, and back-end technologies such as Node.js, Express.js, and Django. I also work with databases like MongoDB and SQL, ensuring smooth data flow and management.
+
+            Beyond web development, I have explored cloud platforms such as AWS, Microsoft Azure, and Oracle Cloud (OCI), where I’ve deployed applications using services like EC2, S3, VPC, RDS, and IAM. I’m comfortable with developer tools like GitHub, GitLab, VS Code, Eclipse, and also have experience working in Linux environments."></p>
+
+            <button id="readMoreBtn" class="btn">Read More</button>
+
         </div>
     </section>
+
 
     <!--Services-->>
 
@@ -172,6 +185,52 @@
                 </a>
             </div>
         </div>
+    </section>
+    
+    <!-- Hire me -->
+
+    <section id="hire" class="hire-section">
+        <h2>Hire Me</h2>
+        <p>If you're interested in working with me, please fill out the offer details below:</p>
+
+        <!-- Replace YOUR_FORMSPREE_LINK with your real Formspree link -->
+        <form class="hire-form" action="https://formspree.io/f/mpwjoony" method="POST">
+        
+        <!-- Hidden field to identify this form -->
+        <input type="hidden" name="form_type" value="Hire Me Form">
+
+        <div class="form-group">
+            <label>Company Name</label>
+            <input type="text" name="company" placeholder="Enter company name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Job Title / Role</label>
+            <input type="text" name="role" placeholder="Enter job title" required>
+        </div>
+
+        <div class="form-group">
+            <label>Location</label>
+            <input type="text" name="location" placeholder="Enter location">
+        </div>
+
+        <div class="form-group">
+            <label>CTC Offered</label>
+            <input type="text" name="ctc" placeholder="e.g. ₹12 LPA">
+        </div>
+
+        <div class="form-group">
+            <label>Joining Date</label>
+            <input type="date" name="joining_date">
+        </div>
+
+        <div class="form-group">
+            <label>Other Benefits / Notes</label>
+            <textarea name="notes" rows="3" placeholder="Add details here..."></textarea>
+        </div>
+
+        <button type="submit">Submit Offer</button>
+        </form>
     </section>
 
     <!-- Contact -->
